@@ -20,7 +20,7 @@ $(document).ready(function(){
 function obtenerBase() {
     var ejercicio = $('#ejercicio').val();
     $.ajax({
-        url: 'salida.php',
+        url: '/includes/salida.php',
         method: 'POST',
         data: {
                 accion: 'obtB',
@@ -36,7 +36,7 @@ function obtenerBase() {
 function obtenerGrupos() {
     var ejercicio = $('#ejercicio').val();
     $.ajax({
-        url: 'funciones.php',
+        url: '/includes/funciones.php',
         method: 'POST',
         data: { 
             accion: 'obtG',
@@ -64,7 +64,7 @@ function obtenerGrupos() {
 function obtenerMatriculas(ejercicio, grupo) {
     mostrarCargando();
     $.ajax({
-        url: "funciones.php",
+        url: "/includes/funciones.php",
         method: "POST",
         data: {
             accion: "obtM",
